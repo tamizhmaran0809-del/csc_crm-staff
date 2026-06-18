@@ -36,10 +36,14 @@
                 Staff Management
             </a>
 
-            <a href="#"
+            <!-- <a href="#"
                class="{% if request.resolver_match.url_name == 'staff_profile' %}active{% endif %}">
                 Staff Profile
-            </a> 
+            </a>  -->
+            <a href="#"
+                class="{% if request.resolver_match.url_name == 'overview' or request.resolver_match.url_name == 'attendance' or request.resolver_match.url_name == 'staff_documents' or request.resolver_match.url_name == 'staff_export' or request.resolver_match.url_name == 'edit_staff' %}active{% endif %}">
+               Staff Profile
+            </a>
 
             <a href="{% url 'leads:lead_capture_list' %}"
                class="{% if request.resolver_match.url_name == 'lead_assignment' %}active{% endif %}">
